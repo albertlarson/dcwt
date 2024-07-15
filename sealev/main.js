@@ -59,11 +59,17 @@ new ol.Map({
 
 const control = document.getElementById('level');
 const output = document.getElementById('output');
+const outputFeet = document.getElementById('outputFeet');
+
 const updateLevel = () => {
-  output.innerText = control.value;
-  layer.updateStyleVariables({ level: parseFloat(control.value) });
+  const levelValue = parseFloat(control.value);
+  const feetValue = (levelValue * 3.28084).toFixed(2); // Convert meters to feet and round to 2 decimal places
+  output.innerText = levelValue;
+  outputFeet.innerText = feetValue;
+  layer.updateStyleVariables({ level: levelValue });
 };
 
 output.innerText = control.value;
+outputFeet.innerText = (parseFloat(control.value) * 3.28084).toFixed(2);
 control.addEventListener('input', updateLevel);
 control.addEventListener('change', updateLevel);
