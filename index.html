@@ -3,20 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Splash Page</title>
+    <title>3CRSD</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <img src="3CRS_logo_notagline_bw.png" height="300px" width="300px" alt="Logo" class="logo">
-        </header>
+    <header>
+        <div class="logo-container">
+            <a href="https://3crs.org" target="content-frame"><img src="./3CRS_logo_notagline_bw.png" height="50px" width="50px" alt="Logo" class="logo">
+            <span class="logo-text">3CRS</span></a>
+        </div>
         <nav>
             <ul>
-                <li><a href="./primo/index.html">PRIMo model</a></li>
-                <li><a href="./sealev/index.html">Terrain-RGB sea level</a></li>
+                <li><a href="./primo/index.html" target="content-frame">PRIMo</a></li>
+                <li><a href="./sealev/index.html" target="content-frame">OpenLayers Terrain SLR</a></li>
+                <li><a href="https://mariners-dev.aws.neracoos.org/water-level" target="content-frame">NERA Water Lev</a></li>
+                <li><a href="https://mycoast.org/search-reports?state=ri" target="content-frame">MyCoast</a></li>
             </ul>
         </nav>
-    </div>
+    </header>
+    <iframe name="content-frame"></iframe>
 </body>
 </html>
