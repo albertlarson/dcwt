@@ -15,6 +15,7 @@ html, body {
     height: 0;
     padding-bottom: 50%; /* Aspect ratio of 16:9 (50% of width) */
     position: relative;
+    max-height: 250px; /* Maximum height to prevent the map from getting too tall */
 }
 
 #map {
@@ -35,5 +36,6 @@ html, body {
     #map-container {
         max-width: 100%;
         padding-bottom: 75%; /* Adjust for a taller aspect ratio on mobile */
+        max-height: none; /* Remove max-height for mobile devices */
     }
 }
