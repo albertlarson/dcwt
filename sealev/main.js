@@ -27,7 +27,7 @@ const layer = new ol.layer.WebGLTile({
   }),
   style: {
     variables: {
-      level: 15,
+      level: 3,
     },
     color: [
       'case',
@@ -39,7 +39,7 @@ const layer = new ol.layer.WebGLTile({
 });
 
 new ol.Map({
-  target: 'map-container',
+  target: 'map',
   layers: [
     new ol.layer.Tile({
       source: new ol.source.XYZ({
