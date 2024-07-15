@@ -1,0 +1,51 @@
+v\:* {behavior:url(#default#VML);}
+html, body {
+    overflow: hidden;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: 'Lucida Grande', Geneva, Arial, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body {
+    margin: 0;
+    background: #fff;
+    flex-direction: column;
+}
+h1 {
+    margin: 0;
+    padding: 6px;
+    border: 0;
+    font-size: 20pt;
+}
+#header {
+    height: 43px;
+    padding: 0;
+    background-color: #eee;
+    border: 1px solid #888;
+    width: 50%;
+    text-align: center;
+}
+#subheader {
+    height: 12px;
+    text-align: center;
+    font-size: 10px;
+    color: #555;
+    width: 50%;
+}
+#map {
+    height: 50%;
+    width: 70%;
+    border: 1px solid #888;
+}
+.color-overlay1 {
+    filter: hue-rotate(90deg) saturate(2);
+}
+.color-overlay2 {
+    filter: hue-rotate(180deg) saturate(1.5);
+}
+img, video, canvas {
+    overflow: hidden !important;
+}
