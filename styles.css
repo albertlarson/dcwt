@@ -15,6 +15,7 @@ header {
     padding: 10px 20px;
     background-color: #000;
     color: white;
+    position: relative; /* Ensure proper positioning of dropdown */
 }
 
 .logo-container {
@@ -45,36 +46,29 @@ header {
 .navbar {
     overflow: hidden;
     background-color: #000;
+    display: flex;
+    align-items: center;
+    flex-grow: 1; /* Allow navbar to grow */
+    justify-content: flex-end; /* Ensure icon aligns to the right */
 }
 
-.navbar a {
-    float: left;
-    font-size: 16px;
+.icon {
+    font-size: 15px;
+    cursor: pointer;
     color: white;
-    text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    display: inline-block;
+    width: 30px; /* Ensure consistent width */
+    text-align: center; /* Center the icon */
 }
 
-.dropdown {
-    float: left;
-    overflow: hidden;
+.icon.x {
+    color: red;
+    font-style:bold;
 }
 
-.dropdown .dropbtn {
-    font-size: 16px;  
-    border: none;
-    outline: none;
-    color: white;
-    padding: 14px 16px;
-    background-color: inherit;
-    font-family: inherit;
-    margin: 0;
-}
 
-.navbar a:hover, .dropdown:hover .dropbtn {
-    background-color: #575757;
-}
 
 .dropdown-content {
     display: none;
@@ -83,7 +77,8 @@ header {
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-    right: 0;  /* Align dropdown to the right */
+    right: 0;
+    top: 50px; /* Adjust to place dropdown correctly */
 }
 
 .dropdown-content a {
@@ -97,14 +92,6 @@ header {
 
 .dropdown-content a:hover {
     background-color: #575757;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-.icon {
-    display: none;
 }
 
 iframe {
@@ -122,25 +109,22 @@ iframe {
         float: right;
         display: block;
     }
-}
-
-@media screen and (max-width: 768px) {
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        width: 100%;
+    }
     .navbar.responsive {position: relative;}
     .navbar.responsive .icon {
         position: absolute;
         right: 0;
         top: 0;
     }
-    .navbar.responsive a {
-        float: none;
+    .navbar.responsive .dropdown-content {
         display: block;
-        text-align: left;
-    }
-    .navbar.responsive .dropdown {float: none;}
-    .navbar.responsive .dropdown-content {position: relative;}
-    .navbar.responsive .dropdown .dropbtn {
-        display: block;
+        position: absolute; /* Ensure dropdown content is fully visible */
         width: 100%;
-        text-align: left;
     }
 }

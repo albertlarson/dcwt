@@ -15,21 +15,16 @@
             </a>
         </div>
         <nav class="navbar" id="navbar">
-            <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+            <a href="javascript:void(0);" class="icon" onclick="toggleMenu(event)">
                 &#9776;
             </a>
-            <div class="dropdown">
-                <button class="dropbtn">Menu 
-                    <i class="fa fa-caret-down"></i>
-                </button>
-                <div class="dropdown-content">
-                    <a href="./primo/index.html" target="content-frame">PRIMo</a>
-                    <a href="./sealev/index.html" target="content-frame">OpenLayers Terrain SLR</a>
-                    <a href="https://mariners-dev.aws.neracoos.org/water-level" target="content-frame">NERA Water Lev</a>
-                    <a href="https://mycoast.org/search-reports?state=ri" target="content-frame">MyCoast</a>
-                    <a href="https://edc.maps.arcgis.com/apps/dashboards/df600b99bba34635b2b03b5e33d5ed8d" target="content-frame">RI-CHAMP</a>
-                </div>
-            </div> 
+            <div class="dropdown-content" id="nav-links">
+                <a href="./primo/index.html" target="content-frame">PRIMo</a>
+                <a href="./sealev/index.html" target="content-frame">OpenLayers Terrain SLR</a>
+                <a href="https://mariners-dev.aws.neracoos.org/water-level" target="content-frame">NERA Water Lev</a>
+                <a href="https://mycoast.org/search-reports?state=ri" target="content-frame">MyCoast</a>
+                <a href="https://edc.maps.arcgis.com/apps/dashboards/df600b99bba34635b2b03b5e33d5ed8d" target="content-frame">RI-CHAMP</a>
+            </div>
         </nav>
     </header>
     <iframe name="content-frame"></iframe>
