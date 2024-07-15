@@ -3,31 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3CRSD</title>
-    <link rel="stylesheet" href="./styles.css">
+    <title>Responsive Website</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <div class="logo-container">
-            <a href="https://3crs.org" target="content-frame">
-                <img src="./3CRS_logo_notagline_bw.png" height="50px" width="50px" alt="Logo" class="logo">
-                <span class="logo-text">3CRS</span>
-            </a>
+        <div class="logo">
+            <a href="./home.html" target="content-frame"><img src="../dcwt/3CRS_logo_notagline_bw.png" alt="Logo"></a>
         </div>
-        <nav class="navbar" id="navbar">
-            <a href="javascript:void(0);" class="icon" onclick="toggleMenu(event)">
-                &#9776;
-            </a>
-            <div class="dropdown-content" id="nav-links">
-                <a href="./primo/index.html" target="content-frame">PRIMo</a>
-                <a href="./sealev/index.html" target="content-frame">OpenLayers Terrain SLR</a>
-                <a href="https://mariners-dev.aws.neracoos.org/water-level" target="content-frame">NERA Water Lev</a>
-                <a href="https://mycoast.org/search-reports?state=ri" target="content-frame">MyCoast</a>
-                <a href="https://edc.maps.arcgis.com/apps/dashboards/df600b99bba34635b2b03b5e33d5ed8d" target="content-frame">RI-CHAMP</a>
-            </div>
+        <div class="hamburger" id="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <nav id="nav-links">
+            <a href="./primo/index.html" target="content-frame">PRIMo</a>
+            <a href="./sealev/index.html" target="content-frame">OpenLayers Terrain SLR</a>
+            <a href="https://mycoast.org/search-reports?state=ri" target="content-frame">MyCoast</a>
+            <a href="https://edc.maps.arcgis.com/apps/dashboards/df600b99bba34635b2b03b5e33d5ed8d" target="content-frame">RI-CHAMP</a>
+            <a href="https://mariners-dev.aws.neracoos.org/water-level" target="content-frame">NERACOOS Water Lev</a>
         </nav>
     </header>
-    <iframe name="content-frame"></iframe>
-    <script src="./script.js"></script>
+    <iframe name="content-frame" id="content-frame" src="home.html"></iframe>
+
+    <script src="scripts.js"></script>
 </body>
 </html>

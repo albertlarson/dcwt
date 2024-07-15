@@ -1,132 +1,87 @@
-/* Base styles */
-body {
-    font-family: Arial, sans-serif;
+:root {
+    --hamburger-width: 20px; /* Width of the hamburger bars */
+    --hamburger-height: 2px; /* Height of the hamburger bars */
+    --hamburger-spacing: 3px; /* Spacing between the bars */
+    --hamburger-color: white; /* Color of the hamburger bars */
+    --hamburger-active-color: red; /* Color of the bars when active */
+}
+
+body, html {
     margin: 0;
     padding: 0;
-    background-color: #ffffff;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
+    height: 100%;
+    width: 100%;
+    font-family: Arial, sans-serif;
 }
 
 header {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    padding: 10px 20px;
+    align-items: center;
     background-color: #000;
     color: white;
-    position: relative; /* Ensure proper positioning of dropdown */
+    padding: 10px;
+    position: relative;
 }
 
-.logo-container {
-    display: flex;
-    align-items: center;
-}
-
-.logo-container a {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-}
-
-.logo {
-    max-height: 50px;
+.logo img {
+    height: 40px;
     filter: invert(100%);
-    margin-right: 10px;
 }
 
-.logo-text {
-    display: inline-block;
-    color: white;
-    font-size: 1em;
-    word-wrap: break-word;
-    text-align: left;
-}
 
-.navbar {
-    overflow: hidden;
-    background-color: #000;
+.hamburger {
     display: flex;
-    align-items: center;
-    flex-grow: 1; /* Allow navbar to grow */
-    justify-content: flex-end; /* Ensure icon aligns to the right */
-}
-
-.icon {
-    font-size: 15px;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(var(--hamburger-height) * 3 + var(--hamburger-spacing) * 2);
     cursor: pointer;
-    color: white;
-    padding: 14px 16px;
-    text-decoration: none;
-    display: inline-block;
-    width: 30px; /* Ensure consistent width */
-    text-align: center; /* Center the icon */
 }
 
-.icon.x {
-    color: red;
-    font-weight: bold;
+.hamburger .bar {
+    height: var(--hamburger-height);
+    width: var(--hamburger-width);
+    background-color: var(--hamburger-color);
+    transition: all 0.3s;
 }
 
-.dropdown-content {
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(calc(var(--hamburger-height) + var(--hamburger-spacing))) rotate(45deg);
+    background-color: var(--hamburger-active-color);
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(calc(-1 * (var(--hamburger-height) + var(--hamburger-spacing)))) rotate(-45deg);
+    background-color: var(--hamburger-active-color);
+}
+
+nav {
     display: none;
+    flex-direction: column;
     position: absolute;
-    background-color: #000;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    right: 0;
-    top: 50px; /* Adjust to place dropdown correctly */
+    top: 50px;
+    right: 10px;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
 }
 
-.dropdown-content a {
-    float: none;
+nav a {
     color: white;
-    padding: 12px 16px;
     text-decoration: none;
-    display: block;
-    text-align: left;
+    padding: 10px 0;
 }
 
-.dropdown-content a:hover {
-    background-color: #575757;
+nav a:hover {
+    background-color: #555;
 }
 
 iframe {
-    flex-grow: 1;
     width: 100%;
-    height: calc(100vh - 70px); /* Adjust height as needed */
+    height: calc(100% - 60px); /* Adjust based on header height */
     border: none;
-}
-
-/* Responsive styles */
-@media screen and (max-width: 768px) {
-    .navbar a:not(:first-child), .dropdown .dropbtn {
-        display: none;
-    }
-    .navbar a.icon {
-        float: right;
-        display: block;
-    }
-    .dropdown-content {
-        display: none;
-        position: absolute;
-        top: 50px;
-        right: 0;
-        width: 100%;
-        background-color: #000;
-    }
-    .navbar.responsive {position: relative;}
-    .navbar.responsive .icon {
-        position: absolute;
-        right: 0;
-        top: 0;
-    }
-    .navbar.responsive .dropdown-content {
-        display: block;
-        width: 100%;
-        top: 50px; /* Adjust to place dropdown correctly */
-        right: 0;
-    }
 }
