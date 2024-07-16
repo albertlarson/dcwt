@@ -37,8 +37,9 @@ h1 {
 }
 #map {
     height: 50%;
-    width: 70%;
     border: 1px solid #888;
+    width: 100%;
+    max-width: 800px;
 }
 .color-overlay1 {
     filter: hue-rotate(90deg) saturate(2);
