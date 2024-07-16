@@ -1,9 +1,9 @@
 :root {
-    --hamburger-width: 20px; /* Width of the hamburger bars */
-    --hamburger-height: 2px; /* Height of the hamburger bars */
-    --hamburger-spacing: 3px; /* Spacing between the bars */
-    --hamburger-color: white; /* Color of the hamburger bars */
-    --hamburger-active-color: red; /* Color of the bars when active */
+    --hamburger-width: 20px;
+    --hamburger-height: 2px;
+    --hamburger-spacing: 3px;
+    --hamburger-color: white;
+    --hamburger-active-color: red;
 }
 
 body, html {
@@ -28,7 +28,6 @@ header {
     height: 40px;
     filter: invert(100%);
 }
-
 
 .hamburger {
     display: flex;
@@ -82,6 +81,6 @@ nav a:hover {
 
 iframe {
     width: 100%;
-    height: calc(100% - 60px); /* Adjust based on header height */
+    height: calc(100% - 60px);
     border: none;
 }

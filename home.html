@@ -4,17 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Welcome to the 3CRSDashboard Home Page</h1>
-    <p>Use the navbar to access all our partner resources.</p>
-    <p></p>
+    <h1>Welcome to the Home Page</h1>
+    <p>Click anywhere in this iframe to test the close functionality of the hamburger menu.</p>
+    <script>
+        document.addEventListener('click', function() {
+            window.parent.postMessage('click-inside-iframe', '*');
+        });
+    </script>
 </body>
 </html>
