@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             attributions: '',
                             minZoom: 8,
                             maxZoom: 15,
-                            url: './tile_test3/{z}/{x}/{y}.png',
+                            url: 'https://storage.googleapis.com/sealevel-sensors.appspot.com/tile_test3/{z}/{x}/{y}.png',
                             tileSize: [256, 256]
                         })
                     }),
