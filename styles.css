@@ -16,12 +16,16 @@ body, html {
 
 header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     background-color: #000;
     color: white;
     padding: 10px;
     position: relative;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
 }
 
 .logo img {
@@ -35,6 +39,7 @@ header {
     justify-content: space-between;
     height: calc(var(--hamburger-height) * 3 + var(--hamburger-spacing) * 2);
     cursor: pointer;
+    margin-left: 10px;
 }
 
 .hamburger .bar {
@@ -62,11 +67,12 @@ nav {
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 50px;
-    right: 10px;
+    top: 100%;
+    left: 0;
     background-color: #333;
     padding: 10px;
     border-radius: 5px;
+    z-index: 1000; /* Ensure it appears above other elements */
 }
 
 nav a {
